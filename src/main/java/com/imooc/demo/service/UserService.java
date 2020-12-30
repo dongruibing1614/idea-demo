@@ -28,7 +28,7 @@ public class UserService {
     public UserDto doLogin(UserDto dto) {
         List<User> userList = userMapper.findByLoginName(dto.getLoginName());
         if (CollectionUtils.isEmpty(userList)) {
-            LOG.info("根据用户名查找不到记录vv");
+            LOG.info("根据用户名查找不到记录");
             return null;
         } else {
             User user = userList.get(0);
